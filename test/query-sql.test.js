@@ -11,4 +11,10 @@ describe("Prisma Client", () => {
       console.log(`id: ${sample.id}, name: ${sample.name}`);
     });
   });
+
+  it("should be able to query sql", async () => {
+    const customers = await prisma.$queryRaw`SELECT * FROM customers;`;
+
+    console.log(customers);
+  });
 });
