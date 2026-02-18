@@ -50,7 +50,7 @@ describe("Prisma Client", () => {
     expect(customer.phone).toBe("0897887567");
   });
 
-  it.only("should be able to delete customer", async () => {
+  it("should be able to delete customer", async () => {
     const customer = await prisma.customer.delete({
       where: {
         id: "Budi",
